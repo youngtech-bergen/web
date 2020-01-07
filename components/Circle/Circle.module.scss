@@ -1,0 +1,23 @@
+.circle {
+  position: absolute;
+  left: 0;
+  border-radius: 50%;
+  background-color: var(--primary-dark);
+  opacity: 0.25;
+  z-index: -1;
+  pointer-events: none;
+}
+
+@media screen and(min-aspect-ratio: 1/1) {
+  .circle {
+    height: 100vh;
+    width: 100vh;
+  }
+}
+
+@media screen and(max-aspect-ratio: 1/1) {
+  .circle {
+    height: 100vw;
+    width: 100vw;
+  }
+}

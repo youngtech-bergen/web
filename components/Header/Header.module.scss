@@ -1,0 +1,31 @@
+nav {
+  :global(body) {
+    margin: 0;
+  }
+
+  ul {
+    margin: 0;
+    padding: 1em 1em 1em 0.75em;
+    display: flex;
+    justify-content: space-between;
+
+    li {
+      display: flex;
+      padding: 6px 8px;
+
+      .link {
+        padding-right: 3.5em;
+        text-decoration: none;
+        font-size: 1rem;
+        font-family: 'Source Code Pro', monospace;
+        transition: 0.2s ease;
+      }
+    }
+  }
+}
+
+.logo > * {
+  fill: var(--accent-color);
+  width: 4.5rem;
+  height: 4.5rem;
+}

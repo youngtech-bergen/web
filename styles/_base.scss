@@ -1,0 +1,17 @@
+body {
+  background-color: var(--background-color);
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: black;
+}
+
+a:hover {
+  color: var(--accent-color);
+}
+
+a:active {
+  color: var(--accent-color);
+}

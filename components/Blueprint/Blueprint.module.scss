@@ -1,0 +1,44 @@
+.blueprint {
+  position: absolute;
+  left: 0;
+  opacity: 0.5;
+  pointer-events: none;
+
+  .verticalContainer {
+    width: 100vw;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .verticalLine {
+      margin-left: 3.5em;
+      margin-right: 3.5em;
+      width: 2px;
+      height: 100vh;
+      background-color: var(--primary-dark);
+    }
+  }
+
+  .horizontalContainer {
+    height: 100vh;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .horizontalLine {
+      margin-top: 3.5em;
+      margin-bottom: 3.5em;
+      width: 100vw;
+      height: 2px;
+      background-color: var(--primary-dark);
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .blueprint {
+    opacity: 0;
+  }
+}

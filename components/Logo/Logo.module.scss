@@ -1,0 +1,34 @@
+.logoContainer {
+  display: inline-block;
+  position: relative;
+
+  .wave,
+  .outline {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    transition: 1s ease;
+  }
+}
+
+.logoContainer:hover {
+  .outline {
+    animation-name: spin;
+    animation-duration: 5000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
