@@ -15,6 +15,7 @@ jobs:
         node-version: 13.x
     - name: next build & now deploy
       run: |
+        yarn install
         yarn build
         now --prod
       env:
