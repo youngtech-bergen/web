@@ -13,8 +13,6 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: 13.x
-    - name: install now
-      run:  npm i -g now@latest
     - name: next build & now deploy
       run: |
         yarn build
