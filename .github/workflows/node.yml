@@ -17,7 +17,7 @@ jobs:
       run: |
         yarn install
         yarn build
-        now --prod
+        now --prod --token $NOW_TOKEN
       env:
         CI: true
-        token: ${{secrets.NOW_TOKEN}}
+        NOW_TOKEN: ${{secrets.NOW_TOKEN}}
