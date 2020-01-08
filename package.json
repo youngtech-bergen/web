@@ -27,6 +27,7 @@
     "@types/node": "^13.1.2",
     "@types/react": "^16.9.17",
     "next-images": "^1.2.0",
+    "react-feather": "^2.0.3",
     "typescript": "^3.7.4"
   }
 }

@@ -6,25 +6,27 @@ const Header: React.FC = () => (
   <nav role="navigation" aria-label="main navigation">
     <ul>
       <li>
-        <a href="/" className={css.logo}>
-          <Logo />
-        </a>
+        <Link href="/">
+          <a className={css.logo}>
+            <Logo />
+          </a>
+        </Link>
       </li>
       <li></li>
       <li>
         <div className={css.links}>
-          <a href="/" className={css.link}>
-            Hjem
-          </a>
-          <a href="/events" className={css.link}>
-            Events
-          </a>
-          <a href="/about" className={css.link}>
-            Om oss
-          </a>
-          <a href="/membership" className={css.link}>
-            Medlemskap
-          </a>
+          <Link href="/">
+            <a className={css.link}>Hjem</a>
+          </Link>
+          <Link href="/events">
+            <a className={css.link}>Events</a>
+          </Link>
+          <Link href="/about">
+            <a className={css.link}>Om oss</a>
+          </Link>
+          <Link href="/membership">
+            <a className={css.link}>Medlemskap</a>
+          </Link>
         </div>
       </li>
     </ul>

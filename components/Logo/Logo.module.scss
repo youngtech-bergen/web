@@ -12,15 +12,17 @@
     left: 0;
     right: 0;
     transition: 1s ease;
+    animation-name: spin;
+    animation-duration: 5000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-play-state: paused;
   }
 }
 
 .logoContainer:hover {
   .outline {
-    animation-name: spin;
-    animation-duration: 5000ms;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
+    animation-play-state: running;
   }
 }
 

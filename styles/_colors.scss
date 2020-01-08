@@ -1,6 +1,28 @@
 :root {
-  --primary-color: #bee8dd;
-  --primary-dark: #aad6d2;
-  --accent-color: #e93940;
-  --background-color: #d4f2ea;
+  $accents: (
+    mint: #e93940,
+    lavendel: #f9b4ab
+  );
+
+  $primaries: (
+    mint: #bee8dd,
+    lavendel: #264e70
+  );
+
+  $primary-darks: (
+    mint: #aad6d2,
+    lavendel: #1c3d59
+  );
+
+  $backgrounds: (
+    mint: #d4f2ea,
+    lavendel: #2f597c
+  );
+
+  --text-color: #fdebd3;
+  --primary-color: #264e70;
+  --primary-dark: #1c3d59;
+  --accent-color: #f9b4ab;
+  --tertiary-color: #679186;
+  --background-color: #2f597c;
 }

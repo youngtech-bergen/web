@@ -1,4 +1,9 @@
 declare module '*.scss' {
-  export const content: { [className: string]: string }
-  export default content
+  export const value: { [className: string]: string }
+  export default value
+}
+
+declare module '*.md' {
+  const value: any
+  export default value
 }

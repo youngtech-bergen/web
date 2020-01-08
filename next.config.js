@@ -16,7 +16,7 @@ module.exports = withImages(
           }
         },
         {
-          test: '/.md$/',
+          test: /\.md$/,
           use: 'raw-loader'
         }
       )

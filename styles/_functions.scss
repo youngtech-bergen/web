@@ -1,0 +1,15 @@
+//$key: random_element(mint, lavendel);
+
+@function random_element($elements...) {
+  @return nth($elements, random(length($elements)));
+}
+
+@function color($map) {
+  @debug 'map: `#{$map}` key: `#{$key}`';
+  @if map.has-key($map, $key) {
+    @return map.get($map, $key);
+  }
+
+  @warn "Unknown `#{$key}` in map.";
+  @return null;
+}
