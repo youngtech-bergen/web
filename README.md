@@ -5,19 +5,13 @@
 Install dependencies
 
 ```bash
-yarn install
-```
-
-Make a first build
-
-```bash
-yarn build
+yarn
 ```
 
 Run the development server
 
 ```bash
-yarn start
+yarn next
 ```
 
 When the above command completes you'll be able to view your website at `http://localhost:3000`.
