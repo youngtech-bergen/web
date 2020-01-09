@@ -29,3 +29,20 @@ nav {
   width: 4.5rem;
   height: 4.5rem;
 }
+
+.burger {
+  float: right;
+  padding: 2.5em;
+}
+
+@media screen and(max-width: 768px) {
+  .links {
+    display: none;
+  }
+}
+
+@media screen and(min-width: 768px) {
+  .burger {
+    display: none;
+  }
+}

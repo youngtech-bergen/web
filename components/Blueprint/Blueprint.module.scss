@@ -1,5 +1,5 @@
 .blueprint {
-  position: absolute;
+  position: fixed;
   left: 0;
   opacity: 0.5;
   pointer-events: none;
@@ -22,6 +22,7 @@
 
   .horizontalContainer {
     height: 100vh;
+    width: 100vw;
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -30,7 +31,7 @@
     .horizontalLine {
       margin-top: 3.5em;
       margin-bottom: 3.5em;
-      width: 100vw;
+      width: 100%;
       height: 1px;
       background-color: var(--primary-dark);
     }

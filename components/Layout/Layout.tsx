@@ -3,7 +3,7 @@ import css from './Layout.module.scss'
 import { Footer, Meta, Header, Circle, Blueprint } from '../'
 
 const Layout: React.FC<SiteProps> = props => (
-  <div>
+  <div className={css.container}>
     <Circle />
     <Blueprint />
     <section className={css.layout}>

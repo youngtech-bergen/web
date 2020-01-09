@@ -9,8 +9,8 @@ const companies = ['DNB']
 
 const Footer: React.FC = () => (
   <footer role="navigation" aria-label="footer navigation">
-    <div className={css.row}>
-      <div>
+    <div className={css.content}>
+      <div className={css.github}>
         <ul>
           <li>
             <code>Make a change</code>
@@ -22,13 +22,13 @@ const Footer: React.FC = () => (
           </li>
         </ul>
       </div>
-      <div>
+      <div className={css.sponsors}>
         <h5>Våre sponsorer</h5>
         <div className={css.logos}>
           {companies.map(company => logos[company])}
         </div>
       </div>
-      <div>
+      <div className={css.contact}>
         <ul>
           <li>
             <code>Kontakt oss</code>

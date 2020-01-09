@@ -1,19 +1,20 @@
 footer {
-  width: 100vw;
-  height: 125px;
+  padding-bottom: 2.5em;
+  width: 100%;
   background-color: var(--primary-color);
-  position: fixed;
-  bottom: 0;
-  left: 0;
+  position: absolute;
   text-align: center;
 
-  .row {
+  .content > div {
+    padding-top: 2.5em;
+  }
+
+  .content {
     height: 100%;
-    padding: 0 4rem 0 4rem;
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    padding: 0 4rem 0 4rem;
 
     h5 {
       padding: 0;
@@ -46,6 +47,18 @@ footer {
     }
   }
 
+  .github {
+    order: 1;
+  }
+
+  .sponsors {
+    order: 2;
+  }
+
+  .contact {
+    order: 3;
+  }
+
   .logos {
     display: flex;
     flex-direction: row;
@@ -55,9 +68,39 @@ footer {
       fill: var(--text-color);
     }
   }
+
+  @media screen and(min-width: 768px) {
+    .content {
+      flex-direction: row;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .content {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    ul {
+      text-align: center;
+    }
+
+    .sponsors {
+      order: 1;
+    }
+
+    .contact {
+      order: 2;
+    }
+
+    .github {
+      order: 3;
+    }
+  }
 }
 
 ul {
+  padding-left: 0;
   text-align: left;
   margin: 0;
 

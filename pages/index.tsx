@@ -11,22 +11,20 @@ const content = {
 }
 
 const Home = () => (
-  <div>
-    <Layout siteTitle="YoungTech Bergen">
-      <section className={css.hero}>
-        <MarkdownBody className={css.title} content={content['title']} />
-        <div className={css.row}>
-          {['events', 'about', 'membership'].map(card => (
-            <Link href={`/${card}`}>
-              <a className={css.card} key={card}>
-                <MarkdownBody content={content[card]} />
-              </a>
-            </Link>
-          ))}
-        </div>
-      </section>
-    </Layout>
-  </div>
+  <Layout siteTitle="YoungTech Bergen">
+    <section className={css.hero}>
+      <MarkdownBody className={css.title} content={content['title']} />
+      <div className={css.row}>
+        {['events', 'about', 'membership'].map(card => (
+          <Link href={`/${card}`} prefetch>
+            <a className={css.card} key={card}>
+              <MarkdownBody content={content[card]} />
+            </a>
+          </Link>
+        ))}
+      </div>
+    </section>
+  </Layout>
 )
 
 export default Home
