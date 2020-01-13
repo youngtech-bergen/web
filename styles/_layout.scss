@@ -1,1 +1,12 @@
-// TODO: Add base layout rules
+.paragraph {
+  width: 90vw;
+  max-width: 960px;
+  margin: auto;
+  padding: 18px;
+  transition: 0.2s ease;
+  line-height: 1.5;
+
+  p {
+    text-align: left;
+  }
+}

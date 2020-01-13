@@ -16,3 +16,7 @@ a:hover {
 a:active {
   color: var(--accent-color);
 }
+
+* {
+  box-sizing: border-box;
+}

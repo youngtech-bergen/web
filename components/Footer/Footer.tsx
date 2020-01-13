@@ -2,7 +2,7 @@ import css from './Footer.module.scss'
 import { DNBLogo } from './logos'
 
 const logos = {
-  DNB: <DNBLogo />
+  DNB: <DNBLogo key="dnb" />
 }
 
 const companies = ['DNB']
@@ -35,7 +35,7 @@ const Footer: React.FC = () => (
           </li>
           <li>
             <a href="mailto:arneolaim@gmail.com">
-              <code>arneolaim@gmail.com (temp)</code>
+              <code>arneolaim@gmail.com</code>
             </a>
           </li>
         </ul>

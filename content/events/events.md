@@ -1,3 +1,1 @@
 # Events
-
-Kommende events.

@@ -6,7 +6,7 @@ const About = () => (
   <div>
     <Layout siteTitle="Om oss">
       <section className={css.hero}>
-        <MarkdownBody content={about} />
+        <MarkdownBody content={about} className={css.paragraph} />
       </section>
     </Layout>
   </div>

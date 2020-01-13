@@ -16,11 +16,13 @@
   max-width: 880px;
   margin: 80px auto 40px;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: center;
 }
 
 .card {
+  margin: 8px;
   padding: 18px 18px 24px;
   width: 220px;
   text-align: left;
@@ -43,4 +45,38 @@
   margin: 0;
   padding: 12px 0 0;
   font-size: 13px;
+}
+
+input {
+  background-color: var(--background-color);
+  padding: 8px 32px;
+  outline: none;
+  border: 1px solid var(--primary-dark);
+  transition: 0.2s ease;
+  font-size: 1rem;
+
+  select,
+  textarea {
+    color: var(--text-color);
+  }
+}
+
+input:focus {
+  border-color: var(--primary-dark);
+}
+
+button {
+  font-size: 1rem;
+  background-color: transparent;
+  padding: 8px 32px;
+  border: 1px solid;
+  transition: 0.2s ease;
+  outline: none;
+  color: var(--accent-color);
+}
+
+button:focus,
+button:hover {
+  color: var(--primary-dark);
+  border-color: var(--primary-dark);
 }

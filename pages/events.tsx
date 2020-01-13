@@ -8,6 +8,11 @@ const Events = () => {
       <Layout siteTitle="Events">
         <section className={css.hero}>
           <MarkdownBody content={events} />
+          <div className={css.row}>
+            <div className={css.card}>
+              <h3>Ser ut som at det er tomt her</h3>
+            </div>
+          </div>
         </section>
       </Layout>
     </div>

@@ -39,16 +39,16 @@ const Header: React.FC = () => {
           <li></li>
           <li>
             <div className={css.links}>
-              <Link href="/" prefetch>
+              <Link href="/">
                 <a className={css.link}>Hjem</a>
               </Link>
-              <Link href="/events" prefetch>
+              <Link href="/events">
                 <a className={css.link}>Events</a>
               </Link>
-              <Link href="/about" prefetch>
+              <Link href="/about">
                 <a className={css.link}>Om oss</a>
               </Link>
-              <Link href="/membership" prefetch>
+              <Link href="/membership">
                 <a className={css.link}>Medlemskap</a>
               </Link>
             </div>
