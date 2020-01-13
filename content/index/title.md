@@ -1,3 +1,3 @@
 # Velkommen til YoungTech Bergen
 
-Her kommer en introduksjon osv.
+Et initiativ med mål om å fremme Bergen som teknologiby og bygge et miljø for unge utviklere i lokalmiljøet.
