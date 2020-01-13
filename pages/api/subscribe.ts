@@ -5,8 +5,6 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
   // 1. Destructure the email address from the request body.
   const { email } = req.body
 
-  console.log(email)
-
   if (!email) {
     // 2. Throw an error if an email wasn't provided.
     return res.status(400).json({ error: 'Email is required' })
