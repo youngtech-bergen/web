@@ -1,4 +1,4 @@
-# YoungTech Bergen
+# YoungTech Bergen 👨‍💻
 
 ## 👉 Get Started
 
