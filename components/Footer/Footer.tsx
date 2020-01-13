@@ -34,8 +34,8 @@ const Footer: React.FC = () => (
             <code>Kontakt oss</code>
           </li>
           <li>
-            <a href="mailto:hello@young.tech">
-              <code>hello@young.tech</code>
+            <a href="mailto:arneolaim@gmail.com">
+              <code>arneolaim@gmail.com (temp)</code>
             </a>
           </li>
         </ul>
