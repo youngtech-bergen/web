@@ -1,6 +1,7 @@
 .hero {
   margin: 0;
   width: 100%;
+  padding: 0px 16px;
   padding-top: 80px;
   line-height: 1.15;
   h1 {
@@ -49,7 +50,7 @@
 
 input {
   background-color: var(--background-color);
-  padding: 8px 32px;
+  padding: 8px 16px;
   outline: none;
   border: 1px solid var(--primary-dark);
   transition: 0.2s ease;
@@ -78,4 +79,16 @@ button {
 button:focus,
 button:hover {
   opacity: 0.5;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  box-shadow: 0 0 0 30px var(--primary-color) inset !important;
+  -webkit-box-shadow: 0 0 0 30px var(--primary-color) inset !important;
+}
+
+input:-webkit-autofill {
+  -webkit-text-fill-color: var(--text-color) !important;
 }

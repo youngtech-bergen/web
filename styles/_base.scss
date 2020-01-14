@@ -20,3 +20,8 @@ a:active {
 * {
   box-sizing: border-box;
 }
+
+::selection,
+::-moz-selection {
+  background: var(--primary-dark);
+}
