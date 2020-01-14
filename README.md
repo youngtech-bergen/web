@@ -16,6 +16,11 @@ yarn next
 
 When the above command completes you'll be able to view your website at `http://localhost:3000`.
 
+To use serverless functions at `/api`, run a now server:
+```bash
+now dev
+```
+
 ## 🥞 Stack
 
 This project uses the following libraries and services:
