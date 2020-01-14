@@ -11,7 +11,7 @@ const content = {
 }
 
 const Home = () => (
-  <Layout siteTitle="YoungTech Bergen">
+  <Layout siteTitle="YoungTech Bergen 🚀">
     <section className={css.hero}>
       <MarkdownBody className={css.title} content={content['title']} />
       <div className={css.row}>

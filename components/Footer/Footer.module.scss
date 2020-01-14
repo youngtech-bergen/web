@@ -48,15 +48,20 @@ footer {
   }
 
   .github {
+    text-align: left;
     order: 1;
+    width: 250px;
   }
 
   .sponsors {
     order: 2;
+    width: 250px;
   }
 
   .contact {
+    text-align: right;
     order: 3;
+    width: 250px;
   }
 
   .logos {
@@ -72,6 +77,7 @@ footer {
   @media screen and(min-width: 768px) {
     .content {
       flex-direction: row;
+      justify-content: space-between;
     }
   }
 
@@ -101,7 +107,6 @@ footer {
 
 ul {
   padding-left: 0;
-  text-align: left;
   margin: 0;
 
   li {

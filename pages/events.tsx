@@ -5,13 +5,11 @@ import css from '../styles/main.scss'
 const Events = () => {
   return (
     <div>
-      <Layout siteTitle="Events">
+      <Layout siteTitle="Events 🎫">
         <section className={css.hero}>
           <MarkdownBody content={events} />
           <div className={css.row}>
-            <div className={css.card}>
-              <h3>Ser ut som at det er tomt her</h3>
-            </div>
+            <h3>Her ser ut som at det er tomt 😱</h3>
           </div>
         </section>
       </Layout>

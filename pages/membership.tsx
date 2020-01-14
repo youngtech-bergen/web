@@ -4,10 +4,10 @@ import css from '../styles/main.scss'
 
 const Membership = () => (
   <div>
-    <Layout siteTitle="Medlemskap">
+    <Layout siteTitle="Medlemskap 🤝">
       <section className={css.hero}>
         <MarkdownBody content={membership} />
-        <MailForm redirect="/membership/success" />
+        <MailForm redirect="/newsletter/subscribed" />
       </section>
     </Layout>
   </div>

@@ -36,7 +36,7 @@ const MailForm: NextPage<MailFormProps> = props => {
         style={{ marginBottom: '16px' }}
       />
       <br />
-      <button type="submit">Sign up</button>
+      <button type="submit">Registrer deg</button>
     </form>
   )
 }

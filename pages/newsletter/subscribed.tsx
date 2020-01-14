@@ -1,15 +1,16 @@
 import { Layout, MarkdownBody } from '../../components'
-import { success } from '../../content/membership'
+import { subscribed } from '../../content/newsletter'
 import css from '../../styles/main.scss'
-const MembershipSuccess = () => (
-  <Layout siteTitle="Newsletter Success">
+
+const NewsletterSubscribed = () => (
+  <Layout siteTitle="Subscribed 📭">
     <section className={css.hero}>
       <div className={css.title}>
-        <MarkdownBody content={success} />
+        <MarkdownBody content={subscribed} />
         <button onClick={e => (window.location.pathname = '/')}>Hjem</button>
       </div>
     </section>
   </Layout>
 )
 
-export default MembershipSuccess
+export default NewsletterSubscribed
