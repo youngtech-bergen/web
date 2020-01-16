@@ -28,7 +28,6 @@ There's some environment variables that need to be set, ([@arnemolland](https://
 mailchimp_list_id=(MAILCHIMP AUDIENCE LIST ID)
 mailchimp_api_key=(MAILCHIMP API KEY)
 mongo_uri=(MONGODB URI)
-host=http://localhost:3000
 ```
 
 ## 🥞 Stack

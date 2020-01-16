@@ -9,13 +9,6 @@ interface EventsProps {
   events: Array<Event>
 }
 
-const dateOptions = {
-  weekday: 'long',
-  year: 'numeric',
-  month: 'long',
-  day: 'numeric'
-}
-
 const Events: NextPage<EventsProps> = props => {
   return (
     <div>
@@ -49,16 +42,21 @@ const Events: NextPage<EventsProps> = props => {
     </div>
   )
 }
-Events.getInitialProps = async function() {
-  if (!process.env.host && process.env.NODE_ENV !== 'production') {
-    process.env.host = 'http://localhost:3000'
-  }
 
-  const res = await fetch(`${process.env.host}/api/events`)
-  const data = await res.json()
+Events.getInitialProps = async function(context) {
+  // TODO: Fix ugly code
+  const protocol =
+    process.env.NODE_ENV === 'production' ? 'https://' : 'http://'
+
+  console.log(JSON.stringify(context))
+
+  const res = await fetch(
+    `${context.req ? protocol + context.req.headers.host : ''}/api/events`
+  )
+  const events = await res.json()
 
   return {
-    events: data
+    events
   }
 }
 

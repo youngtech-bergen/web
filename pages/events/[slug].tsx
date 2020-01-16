@@ -34,11 +34,15 @@ const EventPage: NextPage<EventProps> = props => {
 EventPage.getInitialProps = async function(context) {
   const { slug = '' } = context.query
 
-  if (!process.env.host && process.env.NODE_ENV !== 'production') {
-    process.env.host = 'http://localhost:3000'
-  }
+  // TODO: Fix ugly code
+  const protocol =
+    process.env.NODE_ENV === 'production' ? 'https://' : 'http://'
 
-  const res = await fetch(`${process.env.host}/api/events/${slug}`)
+  const res = await fetch(
+    `${
+      context.req ? protocol + context.req.headers.host : ''
+    }/api/events/${slug}`
+  )
   const event = await res.json()
 
   return {
