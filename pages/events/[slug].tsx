@@ -1,5 +1,5 @@
 import { Layout, RegistrationForm } from '../../components'
-import css from '../styles/main.scss'
+import css from '../../styles/main.scss'
 import { NextPage } from 'next'
 import { Event } from '../../typings/event'
 import 'isomorphic-unfetch'
