@@ -6,14 +6,14 @@ interface MailFormProps {
 }
 
 const MailForm: NextPage<MailFormProps> = props => {
-  const [mail, setMail] = useState('')
+  const [email, setEmail] = useState('')
 
   const subscribe = async (e: FormEvent) => {
     e.preventDefault()
 
-    const res = await fetch('/api/subscribe', {
+    const res = await fetch('/api/newsletter/subscribe', {
       body: JSON.stringify({
-        email: mail
+        email
       }),
       headers: {
         'Content-Type': 'application/json'
@@ -32,8 +32,7 @@ const MailForm: NextPage<MailFormProps> = props => {
         id="email"
         type="text"
         name="email"
-        onChange={e => setMail(e.target.value)}
-        style={{ marginBottom: '16px' }}
+        onChange={e => setEmail(e.target.value)}
       />
       <br />
       <button type="submit">Registrer deg</button>
