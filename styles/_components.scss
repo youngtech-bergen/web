@@ -48,6 +48,36 @@
   font-size: 13px;
 }
 
+.formCard {
+  text-align: left;
+  padding: 1.5em 2.5em 2.5em 2.5em;
+  width: 100%;
+  text-decoration: none;
+  border: 1px solid var(--primary-dark);
+  transition: 0.2s ease;
+  margin-bottom: 16px;
+}
+
+.event {
+  margin: 0 5rem;
+  width: 75%;
+  padding: 0px 16px;
+  padding-top: 80px;
+  line-height: 1.15;
+  h1 {
+    font-size: 48px;
+  }
+
+  .date {
+    color: var(--accent-color);
+  }
+}
+
+label {
+  margin-bottom: 8px;
+  display: block;
+}
+
 input {
   background-color: var(--background-color);
   padding: 8px 16px;
@@ -55,6 +85,7 @@ input {
   border: 1px solid var(--primary-dark);
   transition: 0.2s ease;
   font-size: 1rem;
+  margin-bottom: 16px;
 
   select,
   textarea {

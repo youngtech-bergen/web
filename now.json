@@ -1,7 +1,9 @@
 {
 	"env": {
 		"mailchimp_list_id": "@mailchimp_list_id",
-		"mailchimp_api_key": "@mailchimp_api_key"
+		"mailchimp_api_key": "@mailchimp_api_key",
+		"mongo_uri": "@mongo_uri",
+		"host": "@host"
 	},
 	"github": {
 		"autoAlias": false
