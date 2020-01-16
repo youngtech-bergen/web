@@ -13,7 +13,7 @@ const MailForm: NextPage<MailFormProps> = props => {
 
     const res = await fetch('/api/newsletter/subscribe', {
       body: JSON.stringify({
-        email: email
+        email
       }),
       headers: {
         'Content-Type': 'application/json'

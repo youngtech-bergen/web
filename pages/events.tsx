@@ -49,7 +49,11 @@ const Events: NextPage<EventsProps> = props => {
     </div>
   )
 }
-Events.getInitialProps = async function(context) {
+Events.getInitialProps = async function() {
+  if (!process.env.host && process.env.NODE_ENV !== 'production') {
+    process.env.host = 'http://localhost:3000'
+  }
+
   const res = await fetch(`${process.env.host}/api/events`)
   const data = await res.json()
 

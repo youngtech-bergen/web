@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react'
+import React from 'react'
 import Head from 'next/head'
 import { SiteProps } from '../typings/site'
 

@@ -17,9 +17,9 @@ const RegistrationForm: NextPage<RegistrationFormProps> = props => {
 
     const res = await fetch(`/api/events/${props.id}/register`, {
       body: JSON.stringify({
-        name: name,
-        email: email,
-        company: company
+        name,
+        email,
+        company
       }),
       headers: {
         'Content-Type': 'application/json'

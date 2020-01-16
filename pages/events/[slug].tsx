@@ -1,12 +1,11 @@
 import { Layout, RegistrationForm } from '../../components'
-import { useRouter } from 'next/router'
-import css from '../../styles/main.scss'
+import css from '../styles/main.scss'
 import { NextPage } from 'next'
-import { Event } from '../../typings'
+import { Event } from '../../typings/event'
 import 'isomorphic-unfetch'
 
 interface EventProps {
-  event: any
+  event: Event
 }
 
 const EventPage: NextPage<EventProps> = props => {
@@ -35,11 +34,15 @@ const EventPage: NextPage<EventProps> = props => {
 EventPage.getInitialProps = async function(context) {
   const { slug = '' } = context.query
 
+  if (!process.env.host && process.env.NODE_ENV !== 'production') {
+    process.env.host = 'http://localhost:3000'
+  }
+
   const res = await fetch(`${process.env.host}/api/events/${slug}`)
-  const data = await res.json()
+  const event = await res.json()
 
   return {
-    event: data
+    event
   }
 }
 export default EventPage
