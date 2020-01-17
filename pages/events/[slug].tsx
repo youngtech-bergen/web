@@ -1,11 +1,11 @@
 import { Layout, RegistrationForm } from '../../components'
 import css from '../../styles/main.scss'
 import { NextPage } from 'next'
-import { Event } from '../../typings/event'
+import { IEvent } from '../../typings/event'
 import 'isomorphic-unfetch'
 
 interface EventProps {
-  event: Event
+  event: IEvent
 }
 
 const EventPage: NextPage<EventProps> = props => {
@@ -21,6 +21,9 @@ const EventPage: NextPage<EventProps> = props => {
             {new Date(props.event.endDate).getHours()}.00
           </h3>
           <p>{props.event.description}</p>
+          <a href={props.event.ical} className={css.link} download>
+            <code>Legg til i kalenderen</code>
+          </a>
           <div className={css.row}>
             <RegistrationForm
               id={props.event.slug}

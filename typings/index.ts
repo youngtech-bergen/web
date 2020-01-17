@@ -1,4 +1,4 @@
-export { default as Event } from './event'
-export { default as SiteProps } from './site'
-export { default as Location } from './location'
-export { default as Participant } from './participant'
+export { default as IEvent } from './event'
+export { default as ISiteProps } from './site'
+export { default as ILocation } from './location'
+export { default as IParticipant } from './participant'

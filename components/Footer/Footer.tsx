@@ -1,4 +1,6 @@
 import css from './Footer.module.scss'
+import main from '../../styles/main.scss'
+
 import { DNBLogo } from './logos'
 
 const logos = {
@@ -16,7 +18,7 @@ const Footer: React.FC = () => (
             <code>Make a change</code>
           </li>
           <li>
-            <a href="https://github.com/youngtech-bergen">
+            <a href="https://github.com/youngtech-bergen" className={main.link}>
               <code>GitHub</code>
             </a>
           </li>
@@ -34,7 +36,7 @@ const Footer: React.FC = () => (
             <code>Kontakt oss</code>
           </li>
           <li>
-            <a href="https://m.me/youngtech.bergen">
+            <a href="https://m.me/youngtech.bergen" className={main.link}>
               <code>m.me/youngtech.bergen</code>
             </a>
           </li>
