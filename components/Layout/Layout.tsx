@@ -1,8 +1,8 @@
-import { SiteProps } from '../../typings/site'
+import { ISiteProps } from '../../typings/site'
 import css from './Layout.module.scss'
 import { Footer, Meta, Header, Circle, Blueprint } from '../'
 
-const Layout: React.FC<SiteProps> = props => (
+const Layout: React.FC<ISiteProps> = props => (
   <div className={css.container}>
     <Circle />
     <Blueprint />

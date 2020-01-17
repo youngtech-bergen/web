@@ -3361,6 +3361,13 @@ https-browserify@^1.0.0:
   resolved "https://registry.yarnpkg.com/https-browserify/-/https-browserify-1.0.0.tgz#ec06c10e0a34c0f2faf199f7fd7fc78fffd03c73"
   integrity sha1-7AbBDgo0wPL68Zn3/X/Hj//QPHM=
 
+ical-generator@^1.9.2:
+  version "1.9.2"
+  resolved "https://registry.yarnpkg.com/ical-generator/-/ical-generator-1.9.2.tgz#1c585f6344cc0f55e24827b873efe2cb27a47a2f"
+  integrity sha512-z3OLKk/b9TbyOLKOIMpjLJ3u7gq/tXPNsH5uOz+Ai3sqn2kcpjFlZUafKrlduwZn3Xu3fV5WqZ2dddZFrhQTfg==
+  dependencies:
+    moment-timezone "^0.5.27"
+
 iconv-lite@0.4.24:
   version "0.4.24"
   resolved "https://registry.yarnpkg.com/iconv-lite/-/iconv-lite-0.4.24.tgz#2022b4b25fbddc21d2f524974a474aafe733908b"
@@ -4343,6 +4350,18 @@ mkdirp@0.5.1, "mkdirp@>=0.5 0", mkdirp@^0.5.0, mkdirp@^0.5.1:
   integrity sha1-MAV0OOrGz3+MR2fzhkjWaX11yQM=
   dependencies:
     minimist "0.0.8"
+
+moment-timezone@^0.5.27:
+  version "0.5.27"
+  resolved "https://registry.yarnpkg.com/moment-timezone/-/moment-timezone-0.5.27.tgz#73adec8139b6fe30452e78f210f27b1f346b8877"
+  integrity sha512-EIKQs7h5sAsjhPCqN6ggx6cEbs94GK050254TIJySD1bzoM5JTYDwAU1IoVOeTOL6Gm27kYJ51/uuvq1kIlrbw==
+  dependencies:
+    moment ">= 2.9.0"
+
+"moment@>= 2.9.0":
+  version "2.24.0"
+  resolved "https://registry.yarnpkg.com/moment/-/moment-2.24.0.tgz#0d055d53f5052aa653c9f6eb68bb5d12bf5c2b5b"
+  integrity sha512-bV7f+6l2QigeBBZSM/6yTNq4P2fNpSWj/0e7jQcy87A8e7o2nAfP/34/2ky5Vw4B9S446EtIhodAzkFCcR4dQg==
 
 mongodb@^3.5.0:
   version "3.5.0"

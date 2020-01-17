@@ -127,3 +127,27 @@ input:-webkit-autofill:active {
 input:-webkit-autofill {
   -webkit-text-fill-color: var(--text-color) !important;
 }
+
+.link {
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+}
+
+.link:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: '';
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: white;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+
+.link:hover:after {
+  width: 100%;
+  left: 0;
+}

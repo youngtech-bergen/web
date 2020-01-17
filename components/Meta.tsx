@@ -1,8 +1,8 @@
 import React from 'react'
 import Head from 'next/head'
-import { SiteProps } from '../typings/site'
+import { ISiteProps } from '../typings/site'
 
-const Meta: React.FC<SiteProps> = props => (
+const Meta: React.FC<ISiteProps> = props => (
   <>
     <Head>
       <meta name="viewport" content="width=device-width, initial-scale=1" />

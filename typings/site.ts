@@ -1,6 +1,6 @@
 import { ReactNode } from 'react'
 
-export type SiteProps = {
+export interface ISiteProps {
   children?: ReactNode
   siteTitle?: string
   siteDescription?: string

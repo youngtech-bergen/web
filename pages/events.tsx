@@ -2,11 +2,11 @@ import { Layout, MarkdownBody } from '../components'
 import { events } from '../content/events'
 import css from '../styles/main.scss'
 import { NextPage } from 'next'
-import { Event } from '../typings/event'
+import { IEvent } from '../typings/event'
 import 'isomorphic-unfetch'
 
 interface EventsProps {
-  events: Array<Event>
+  events: Array<IEvent>
 }
 
 const Events: NextPage<EventsProps> = props => {
@@ -47,8 +47,6 @@ Events.getInitialProps = async function(context) {
   // TODO: Fix ugly code
   const protocol =
     process.env.NODE_ENV === 'production' ? 'https://' : 'http://'
-
-  console.log(JSON.stringify(context))
 
   const res = await fetch(
     `${context.req ? protocol + context.req.headers.host : ''}/api/events`
