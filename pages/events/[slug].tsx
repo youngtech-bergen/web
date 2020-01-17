@@ -21,7 +21,11 @@ const EventPage: NextPage<EventProps> = props => {
             {new Date(props.event.endDate).getHours()}.00
           </h3>
           <p>{props.event.description}</p>
-          <a href={props.event.ical} className={css.link} download>
+          <a
+            href={`/api/events/${props.event.slug}/ical`}
+            className={css.link}
+            download
+          >
             <code>Legg til i kalenderen</code>
           </a>
           <div className={css.row}>
