@@ -4,6 +4,7 @@
   padding: 0px 16px;
   padding-top: 40px;
   line-height: 1.15;
+
   h1 {
     font-size: 48px;
   }
@@ -15,6 +16,12 @@
 .hero,
 .description {
   text-align: center;
+}
+
+.description {
+  max-width: 40%;
+  margin: 0 auto;
+  margin-bottom: 16px;
 }
 
 .row {

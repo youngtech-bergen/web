@@ -20,7 +20,7 @@ const EventPage: NextPage<EventProps> = props => {
             {new Date(props.event.startDate).getHours()}.00-
             {new Date(props.event.endDate).getHours()}.00
           </h3>
-          <p>{props.event.description}</p>
+          <p className={css.description}>{props.event.description}</p>
           <a
             href={`/api/events/${props.event.slug}/ical`}
             className={css.link}
