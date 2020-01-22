@@ -1,0 +1,31 @@
+{
+	"_id": {
+		"$oid": "5d505646cf6d4fe581014ab2"
+	},
+	"name": "Mock Event",
+	"startDate": {
+		"$date": "2020-02-18T17:00:00.000+00:00"
+	},
+	"endDate": {
+		"$date": "2020-02-18T19:00:00.000+00:00"
+	},
+	"description": "Mock Beskrivelse",
+	"speakers": [
+		{
+			"$oid": "5d505646cf6d4fe581014ab3"
+		}
+	],
+	"slug": "mock",
+	"location": {
+		"address": "Solheimsgaten 7C",
+		"latitude": 60,
+		"longitude": 60
+	},
+	"participants": [
+		{
+			"name": "Ola Nordmann",
+			"email": "ola@nordmann.no",
+			"company": "Norge AS"
+		}
+	]
+}
