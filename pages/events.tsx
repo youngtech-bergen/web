@@ -57,8 +57,6 @@ Events.getInitialProps = async function(context) {
   )
   const events = await res.json()
 
-  console.log(events)
-
   return {
     events
   }
