@@ -1,0 +1,9 @@
+{
+	"rules": {
+		"no-console": [
+			true,
+			"log",
+			"error"
+		]
+	}
+}
