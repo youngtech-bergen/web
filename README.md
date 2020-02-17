@@ -37,7 +37,7 @@ There's some environment variables that need to be set, ([@arnemolland](https://
 ```properties
 mailchimp_list_id=(MAILCHIMP AUDIENCE LIST ID)
 mailchimp_api_key=(MAILCHIMP API KEY)
-mongo_uri=mongodb://localhost/test
+mongo_uri_dev=mongodb://localhost/test
 ```
 
 On your local MongoDB instance, you can import mock data from `mock.json`:

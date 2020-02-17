@@ -1,38 +1,46 @@
-import { Layout, RegistrationForm } from '../../components'
+import { Layout, RegistrationForm, Error } from '../../components'
 import css from '../../styles/main.scss'
 import { NextPage } from 'next'
 import { IEvent } from '../../typings/event'
 import 'isomorphic-unfetch'
 
 interface EventProps {
-  event: IEvent
+  event: IEvent | null
 }
 
-const EventPage: NextPage<EventProps> = props => {
+const EventPage: NextPage<EventProps> = ({ event }) => {
+  if (!event) {
+    return <Error content="😳" />
+  }
+
   return (
     <div>
-      <Layout siteTitle={`${props.event.name} 🎙`}>
+      <Layout siteTitle={`${event.name} 🎙`}>
         <section className={css.hero}>
-          <h1>{props.event.name}</h1>
+          <h1>{event.name}</h1>
           <h3 className={css.date}>
-            {new Date(props.event.startDate).toLocaleDateString('no-NB')}
+            {new Date(event.startDate).toLocaleDateString('no-NB')}
             {' && '}
-            {new Date(props.event.startDate).getHours()}.00-
-            {new Date(props.event.endDate).getHours()}.00
+            {new Date(event.startDate).getHours()}.00-
+            {new Date(event.endDate).getHours()}.00
           </h3>
-          <p className={css.description}>{props.event.description}</p>
+          <p className={css.description}>{event.description}</p>
           <a
-            href={`/api/events/${props.event.slug}/ical`}
+            href={`/api/events/${event.slug}/ical`}
             className={css.link}
             download
           >
             <code>Legg til i kalenderen</code>
           </a>
           <div className={css.row}>
-            <RegistrationForm
-              id={props.event.slug}
-              redirect={`events/${props.event.slug}/success`}
-            />
+            {event.open ? (
+              <RegistrationForm
+                id={event.slug}
+                redirect={`events/${event.slug}/success`}
+              />
+            ) : (
+              <code>Registrering er stengt 🚫</code>
+            )}
           </div>
         </section>
       </Layout>
@@ -52,7 +60,7 @@ EventPage.getInitialProps = async function(context) {
       context.req ? protocol + context.req.headers.host : ''
     }/api/events/${slug}`
   )
-  const event = await res.json()
+  const event = res.ok ? await res.json() : null
 
   return {
     event

@@ -2,7 +2,7 @@
 	"env": {
 		"mailchimp_list_id": "@mailchimp_list_id",
 		"mailchimp_api_key": "@mailchimp_api_key",
-		"mongo_uri": "@mongo_uri",
+		"mongo_uri_prod": "@mongo_uri_prod",
 		"host": "@host"
 	}
 }

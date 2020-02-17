@@ -10,7 +10,12 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
       query: { slug }
     } = req
 
-    const db = await connectToDatabase(process.env.mongo_uri)
+    const uri =
+      process.env.NODE_ENV === 'production'
+        ? process.env.mongo_uri_prod
+        : process.env.mongo_uri_dev
+
+    const db = await connectToDatabase(uri)
 
     const event: IEvent = await db.collection('events').findOne({ slug })
 

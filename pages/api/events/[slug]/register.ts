@@ -9,7 +9,12 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
 
     const participant = req.body
 
-    const db = await connectToDatabase(process.env.mongo_uri)
+    const uri =
+      process.env.NODE_ENV === 'production'
+        ? process.env.mongo_uri_prod
+        : process.env.mongo_uri_dev
+
+    const db = await connectToDatabase(uri)
     const update = await db
       .collection('events')
       .findOneAndUpdate({ slug }, { $push: { participants: participant } })
@@ -20,6 +25,6 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
       res.status(500)
     }
   } catch (e) {
-    res.status(500)
+    res.status(500).send(null)
   }
 }

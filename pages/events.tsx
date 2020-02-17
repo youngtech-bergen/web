@@ -1,23 +1,27 @@
-import { Layout, MarkdownBody } from '../components'
-import { events, empty } from '../content/events'
+import { Layout, MarkdownBody, Error } from '../components'
+import { events as eventsContent, empty } from '../content/events'
 import css from '../styles/main.scss'
 import { NextPage } from 'next'
 import { IEvent } from '../typings/event'
 import 'isomorphic-unfetch'
 
 interface EventsProps {
-  events: Array<IEvent>
+  events: IEvent[] | null
 }
 
-const Events: NextPage<EventsProps> = props => {
+const Events: NextPage<EventsProps> = ({ events }) => {
+  if (!events) {
+    return <Error content="😳" />
+  }
+
   return (
     <div>
       <Layout siteTitle="Events 🎫">
         <section className={css.hero}>
-          <MarkdownBody content={events} />
+          <MarkdownBody content={eventsContent} />
           <div className={css.row}>
-            {props.events.length !== 0 ? (
-              props.events.map(event => (
+            {events.length !== 0 ? (
+              events.map(event => (
                 <a
                   href={`/events/${event.slug}`}
                   className={css.card}
@@ -47,7 +51,7 @@ const Events: NextPage<EventsProps> = props => {
   )
 }
 
-Events.getInitialProps = async function(context) {
+Events.getInitialProps = async function(context): Promise<EventsProps> {
   // TODO: Fix ugly code
   const protocol =
     process.env.NODE_ENV === 'production' ? 'https://' : 'http://'
@@ -55,7 +59,8 @@ Events.getInitialProps = async function(context) {
   const res = await fetch(
     `${context.req ? protocol + context.req.headers.host : ''}/api/events`
   )
-  const events = await res.json()
+
+  const events: IEvent[] = res.ok ? await res.json() : null
 
   return {
     events

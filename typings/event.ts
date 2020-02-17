@@ -16,4 +16,5 @@ export interface IEvent {
   speakers: string[]
   location: ILocation
   ical: string
+  open: boolean
 }
