@@ -16,7 +16,26 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve"
+    "jsx": "preserve",
+    "types": [
+      "node"
+    ],
+    "typeRoots": [
+      ".",
+      "lib/typings"
+    ],
+    "baseUrl": "lib",
+    "paths": {
+      "@components": [
+        "components"
+      ],
+      "@content/*": [
+        "../content/*"
+      ],
+      "@typings/*": [
+        "typings/*"
+      ],
+    },
   },
   "exclude": [
     "node_modules"

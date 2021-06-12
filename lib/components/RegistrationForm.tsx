@@ -1,4 +1,4 @@
-import css from '../styles/main.scss'
+import css from '../../styles/main.scss'
 import { NextPage } from 'next'
 import { FormEvent, useState } from 'react'
 

@@ -1,6 +1,6 @@
-import { Layout, MarkdownBody, MailForm } from '../components'
-import { membership } from '../content/membership'
-import css from '../styles/main.scss'
+import { Layout, MarkdownBody, MailForm } from '@components'
+import { membership } from '@content/membership'
+import css from '../../styles/main.scss'
 
 const Membership = () => (
   <div>

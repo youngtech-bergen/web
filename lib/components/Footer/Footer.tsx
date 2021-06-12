@@ -1,10 +1,10 @@
 import css from './Footer.module.scss'
-import main from '../../styles/main.scss'
+import main from '../../../styles/main.scss'
 
 import { DNBLogo } from './logos'
 
 const logos = {
-  DNB: <DNBLogo key="dnb" />
+  DNB: <DNBLogo key="dnb" />,
 }
 
 const companies = ['DNB']
@@ -27,7 +27,7 @@ const Footer: React.FC = () => (
       <div className={css.sponsors}>
         <h5>Våre sponsorer</h5>
         <div className={css.logos}>
-          {companies.map(company => logos[company])}
+          {companies.map((company) => logos[company])}
         </div>
       </div>
       <div className={css.contact}>

@@ -1,6 +1,6 @@
 import { ISiteProps } from '../../typings/site'
 import css from './Layout.module.scss'
-import { Footer, Meta, Header, Circle, Blueprint } from '../'
+import { Footer, Meta, Header, Circle, Blueprint } from '..'
 
 const Layout: React.FC<ISiteProps> = props => (
   <div className={css.container}>

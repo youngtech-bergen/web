@@ -1,6 +1,6 @@
-import { Layout, MarkdownBody } from '../components'
+import { Layout, MarkdownBody } from '@components'
 import css from '../styles/main.scss'
-import { title, events, about, membership } from '../content/index'
+import { title, events, about, membership } from '@content/index'
 import Link from 'next/link'
 
 const content = {

@@ -1,5 +1,5 @@
 import { NextApiRequest, NextApiResponse } from 'next'
-import { IEvent } from '../../../../typings/event'
+import { IEvent } from '@typings/event'
 import 'isomorphic-unfetch'
 import connectToDatabase from '../../../../db'
 import ical from 'ical-generator'
@@ -7,7 +7,7 @@ import ical from 'ical-generator'
 export default async (req: NextApiRequest, res: NextApiResponse) => {
   try {
     const {
-      query: { slug }
+      query: { slug },
     } = req
 
     const uri =
@@ -20,7 +20,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
     const event: IEvent = await db.collection('events').findOne({ slug })
 
     const cal = ical({
-      timezone: 'Europe/Berlin'
+      timezone: 'Europe/Berlin',
     })
 
     // Create the iCal event
@@ -30,19 +30,22 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
       end: new Date(event.endDate),
       summary: event.name,
       description: event.description,
-      location: event.location.address,
+      location: {
+        title: event.location.address,
+        geo:
+          event.location.latitude && event.location.longitude
+            ? {
+                lat: event.location.latitude,
+                lon: event.location.longitude,
+              }
+            : undefined,
+      },
       url: `https://youngte.ch/events/${event.slug}`,
-      geo:
-        event.location.latitude && event.location.longitude
-          ? {
-              lat: event.location.latitude,
-              lon: event.location.longitude
-            }
-          : undefined,
+
       organizer: {
         name: 'YoungTech Bergen',
-        email: 'hello@youngte.ch'
-      }
+        email: 'hello@youngte.ch',
+      },
     })
 
     res.setHeader('Content-type', 'text/calendar; charset=utf-8')

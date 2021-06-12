@@ -1,6 +1,6 @@
 import { NextApiRequest, NextApiResponse } from 'next'
 import connectToDatabase from '../../db'
-import { IEvent } from '../../typings/event'
+import { IEvent } from '@typings/event'
 
 export default async (req: NextApiRequest, res: NextApiResponse<IEvent[]>) => {
   try {

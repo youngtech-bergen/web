@@ -1,7 +1,7 @@
-import { Layout, RegistrationForm, Error } from '../../components'
+import { Layout, RegistrationForm, Error } from '@components'
 import css from '../../styles/main.scss'
 import { NextPage } from 'next'
-import { IEvent } from '../../typings/event'
+import { IEvent } from '@typings/event'
 import 'isomorphic-unfetch'
 
 interface EventProps {

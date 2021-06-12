@@ -1,6 +1,7 @@
-import { Layout, MarkdownBody } from '../components'
-import { about } from '../content/about'
-import css from '../styles/main.scss'
+import { Layout, MarkdownBody } from '@components'
+import { about } from '@content/about'
+import React from 'react'
+import css from '../../styles/main.scss'
 
 const About = () => (
   <div>

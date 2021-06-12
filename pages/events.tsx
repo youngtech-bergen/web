@@ -1,8 +1,8 @@
-import { Layout, MarkdownBody, Error } from '../components'
-import { events as eventsContent, empty } from '../content/events'
-import css from '../styles/main.scss'
+import { Layout, MarkdownBody, Error } from '@components'
+import { events as eventsContent, empty } from '@content/events'
+import css from '../../styles/main.scss'
 import { NextPage } from 'next'
-import { IEvent } from '../typings/event'
+import { IEvent } from '@typings/event'
 import 'isomorphic-unfetch'
 
 interface EventsProps {

@@ -1,5 +1,5 @@
-import { Layout, MarkdownBody } from '../../components'
-import { subscribed } from '../../content/newsletter'
+import { Layout, MarkdownBody } from '@components'
+import { subscribed } from '@content/newsletter'
 import css from '../../styles/main.scss'
 
 const NewsletterSubscribed = () => (

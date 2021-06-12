@@ -1,6 +1,6 @@
-import { Layout, MarkdownBody } from '../../../components'
+import { Layout, MarkdownBody } from '@components'
 import css from '../../../styles/main.scss'
-import { registered } from '../../../content/events'
+import { registered } from '@content/events'
 
 const SuccessPage = () => (
   <Layout siteTitle="Registrert 📭">

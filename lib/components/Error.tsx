@@ -1,11 +1,11 @@
 import Layout from './Layout'
-import css from '../styles/main.scss'
+import css from '../../styles/main.scss'
 
 interface ErrorProps {
   content: string
 }
 
-const Error = ({ content }) => (
+const Error = ({ content }: ErrorProps) => (
   <Layout>
     <div className={css.hero}>
       <h1>
